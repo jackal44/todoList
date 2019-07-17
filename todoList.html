@@ -19,12 +19,16 @@
     let clickMe = document.getElementById("clickMe")
     let input=document.getElementById("inputbox")
     clickMe.onclick=add
+    let database=[{no:1,items:"Clarify data with Nafis", status:false}]
     
     function add(){
-        console.log("I am here")
-        let items = document.createElement("li")
-        items.innerHTML=input.value
-        list.append(items)
+        database.push({no:database.length,items:input.value,status:false})
+        debugger
+        for (i=0; i<database.length; i++){
+                x= document.createElement("li")
+                x=database[i].items
+                list.append(x+"\n")
+            }
         input.value=""
     }
     </script>
